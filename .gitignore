@@ -5,6 +5,7 @@
 .idea
 **/node_modules/*
 **/.firebaserc
+sigcom-4275f-e45fac0ec917.json
 
 ### Firebase Patch ###
 .runtimeconfig.json
