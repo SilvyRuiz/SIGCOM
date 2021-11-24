@@ -1,11 +1,10 @@
-const admin = require('firebase-admin');
+const { initializeApp, applicationDefault, cert } = require('firebase-admin/app');
+const { getFirestore, Timestamp, FieldValue } = require('firebase-admin/firestore');
+
 const serviceAccount = require('./sigcom-4275f-c7e8fa3b3ad3.json');
 
 initializeApp({
-    Credential: admin.credential.cert(serviceAccount);
-
+  credential: cert(serviceAccount)
 });
-
-const db = admin.firestore();
-
+const db = getFirestore();
 module.exports = db;
