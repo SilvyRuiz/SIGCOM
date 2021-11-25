@@ -1,2 +1,2 @@
 # SIGCOM
-Sistema de Gestión para ]ConsultasMédicas
+Sistema de Gestión para ConsultasMédicas
