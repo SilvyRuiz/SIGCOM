@@ -4,11 +4,13 @@
   "description": "Sistema de Gestión para Consultas Médicas-backend",
   "main": "index.js",
   "scripts": {
-   "start": "node index.js"
+    "dev": "nodemon index.js",
+    "start": "node index.js"
   },
   "author": "Silvana Isabel Ruiz Godoy",
   "license": "ISC",
   "dependencies": {
+    "express": "^4.17.1",
     "firebase-admin": "^10.0.0"
   }
 }
