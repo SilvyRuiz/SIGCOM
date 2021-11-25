@@ -66,9 +66,6 @@ function deletePaciente(uid, callback) {
     })
 }
 
-deletePaciente("AnflqdyfaQuuiFSEfG2m", (status) => {
-    console.log(status);
-})
 
 //exportar métodos o funciones
 module.exports = {
