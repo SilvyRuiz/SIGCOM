@@ -1,16 +1,13 @@
-const { getPaciente } = require('./src/db/crud.js');
-//const insertPaciente = require('./src/db/crud.js');
-//insertPaciente();
-//getPaciente();
+const { getAllPacientes } = require('./src/db/crudPacientes.js');
 
 const express = require('express');
 const app = express();
 const port = 3000;
 
 app.use(express.json());
-app.get('/get-pacientes', function (req, res) {
+app.get('/getAllPacientes', function (req, res) {
 
-    getPaciente(function(arrayPacientes){
+    getAllPacientes(function(arrayPacientes){
         res.json(arrayPacientes);
     })
 })
