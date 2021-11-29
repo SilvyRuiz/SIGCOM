@@ -14,6 +14,7 @@ function getAllPacientes(callback) {
     });
  }
 
+
  //Consultar 1 paciente
  function getPaciente(uid, callback){
      return db.collection("Pacientes").doc(uid).get()
@@ -25,18 +26,21 @@ function getAllPacientes(callback) {
         })
  }
 
+
 //insertar  paciente
 function insertPaciente(paciente, callback){
     return db.collection("Pacientes").add(paciente)
     .then((docRef) => {
         callback("Paciente ingresado con éxito");
+       //callback("Success");
     })
     .catch((error) => {
         callback('Error to get pacientes ${error}');
     });
 }
 
-//Actualizar todos los campos de 1 paciente
+
+//Actualizar  paciente totalmente
 function updatePacienteTotally(uid, paciente, callback){
     return db.collection("Pacientes").doc(uid).set(paciente)
     .then(() => {
@@ -46,11 +50,11 @@ function updatePacienteTotally(uid, paciente, callback){
     })
 }
 
-//Actualizar paciente
+//Actualizar paciente parcialmente
 function updatePacientePartially(uid, paciente, callback){
     return db.collection("Pacientes").doc(uid).update(paciente)
     .then(() => {
-        callback("Paciente parcialmente modificado con éxito");
+        callback("Paciente modificado con éxito");
     }).catch((error) => {
         callback('Error to get pacients ${error}');
     })
@@ -65,7 +69,6 @@ function deletePaciente(uid, callback) {
         callback('Error to get pacients ${error}');
     })
 }
-
 
 //exportar métodos o funciones
 module.exports = {

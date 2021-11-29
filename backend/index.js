@@ -7,13 +7,16 @@ const app = express();
 const port = 3000;
 
 app.use(express.json());
-//API'S 
+
 //ruta para consultar todos los pacientes
 app.get('/pacientes', function (req, res) {
     dbP.getAllPacientes(function(arrayPacientes){
         res.json(arrayPacientes);
     })
 })
+
+
+
 
 //ruta para consultar 1 paciente específico
 app.get('/pacientes/:id', function (req, res) {
@@ -22,6 +25,14 @@ app.get('/pacientes/:id', function (req, res) {
         res.json(refDoc);
     })   
 })
+
+
+
+
+
+
+
+
 
 //ruta para Insertar paciente en base de datos
 app.post('/pacientes', function(req, res){
